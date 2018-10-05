@@ -161,9 +161,10 @@ Amqp::consume('queue-name', function ($message, $resolver) {
 
    $resolver->acknowledge($message);
       
-}, [
-	'timeout' => 2,
-	'vhost'   => 'vhost3'
+}, [] , [
+    null,
+    1 ,
+    null
 ]);
 ```
 
@@ -192,6 +193,23 @@ Amqp::consume('queue-name', function ($message, $resolver) {
     'persistent' => true// required if you want to listen forever
 ]);
 ```
+
+
+### Consuming messages with Config QoS
+
+```php
+\Amqp::consume('', function ($message, $resolver) {
+    var_dump($message->body);
+    $resolver->acknowledge($message);
+}, [
+    'exchange' => 'amq.fanout',
+    'exchange_type' => 'fanout',
+    'queue_force_declare' => true,
+    'queue_exclusive' => true,
+    'persistent' => true// required if you want to listen forever
+]);
+```
+
 
 ## License
 

@@ -41,7 +41,7 @@ class Amqp
      * @param array   $properties
      * @throws Exception\Configuration
      */
-    public function consume($queue, Closure $callback, $properties = [])
+    public function consume($queue, Closure $callback, $properties = [], $get_basic_qos = null)
     {
         $properties['queue'] = $queue;
 
@@ -51,7 +51,7 @@ class Amqp
             ->mergeProperties($properties)
             ->setup();
 
-        $consumer->consume($queue, $callback);
+        $consumer->consume($queue, $callback, $get_basic_qos);
         Request::shutdown($consumer->getChannel(), $consumer->getConnection());
     }
 
