@@ -7,7 +7,7 @@ use Nassaji\Amqp\Request;
 use Nassaji\Amqp\Message;
 
 /**
- * @author Nassaji 
+ * @author Nassaji
  */
 class Amqp
 {

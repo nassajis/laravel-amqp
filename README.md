@@ -193,11 +193,6 @@ Amqp::consume('queue-name', function ($message, $resolver) {
 ]);
 ```
 
-## Credits
-
-* Some concepts were used from https://github.com/mookofe/tail
-
-
 ## License
 
 This package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
