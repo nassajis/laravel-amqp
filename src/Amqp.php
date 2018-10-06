@@ -1,13 +1,13 @@
 <?php
 
-namespace Nassaji\Amqp;
+namespace Nassajis\Amqp;
 
 use Closure;
-use Nassaji\Amqp\Request;
-use Nassaji\Amqp\Message;
+use Nassajis\Amqp\Request;
+use Nassajis\Amqp\Message;
 
 /**
- * @author Nassaji
+ * @author Nassajis
  */
 class Amqp
 {
@@ -22,7 +22,7 @@ class Amqp
         $properties['routing'] = $routing;
 
         /* @var Publisher $publisher */
-        $publisher = app()->make('Nassaji\Amqp\Publisher');
+        $publisher = app()->make('Nassajis\Amqp\Publisher');
         $publisher
             ->mergeProperties($properties)
             ->setup();
@@ -46,7 +46,7 @@ class Amqp
         $properties['queue'] = $queue;
 
         /* @var Consumer $consumer */
-        $consumer = app()->make('Nassaji\Amqp\Consumer');
+        $consumer = app()->make('Nassajis\Amqp\Consumer');
         $consumer
             ->mergeProperties($properties)
             ->setup();
@@ -58,7 +58,7 @@ class Amqp
     /**
      * @param string $body
      * @param array  $properties
-     * @return \Nassaji\Amqp\Message
+     * @return \Nassajis\Amqp\Message
      */
     public function message($body, $properties = [])
     {

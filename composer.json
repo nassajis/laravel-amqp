@@ -1,5 +1,5 @@
 {
-  "name": "nassaji/laravel-amqp",
+  "name": "nassajis/laravel-amqp",
   "description": "AMQP wrapper for Laravel and Lumen to publish and consume messages",
   "keywords": [
     "laravel",
@@ -10,17 +10,17 @@
     "queue",
     "package",
     "message queue",
-    "Nassaji",
-    "nassaji"
+    "Nassajis",
+    "nassajis"
   ],
   "license": "MIT",
   "support": {
-      "issues": "https://github.com/nassaji/laravel-amqp/issues",
-      "source": "https://github.com/nassaji/laravel-amqp"
+      "issues": "https://github.com/nassajis/laravel-amqp/issues",
+      "source": "https://github.com/nassajis/laravel-amqp"
   },
   "authors": [
     {
-    "name": "Nassaji"
+    "name": "Nassajis"
     }
   ],
   "require": {
@@ -35,17 +35,17 @@
   },
   "autoload": {
     "psr-4": {
-      "Nassaji\\Amqp\\": "src/",
-      "Nassaji\\Amqp\\Test\\": "test/"
+      "Nassajis\\Amqp\\": "src/",
+      "Nassajis\\Amqp\\Test\\": "test/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Nassaji\\Amqp\\AmqpServiceProvider"
+        "Nassajis\\Amqp\\AmqpServiceProvider"
       ],
       "aliases": {
-        "Amqp": "Nassaji\\Amqp\\Facades\\Amqp"
+        "Amqp": "Nassajis\\Amqp\\Facades\\Amqp"
       }
     }
   },

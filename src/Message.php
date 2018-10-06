@@ -1,11 +1,11 @@
 <?php
 
-namespace Nassaji\Amqp;
+namespace Nassajis\Amqp;
 
 use PhpAmqpLib\Message\AMQPMessage;
 
 /**
- * @author Nassaji
+ * @author Nassajis
  */
 class Message extends AMQPMessage
 {

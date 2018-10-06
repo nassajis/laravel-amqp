@@ -1,11 +1,11 @@
 <?php
 
-namespace Nassaji\Amqp;
+namespace Nassajis\Amqp;
 
 use Illuminate\Config\Repository;
 
 /**
- * @author Nassaji
+ * @author Nassajis
  */
 abstract class Context
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Nassaji\Amqp;
+namespace Nassajis\Amqp;
 
 use Illuminate\Config\Repository;
 use Closure;
@@ -8,7 +8,7 @@ use PhpAmqpLib\Exception\AMQPTimeoutException;
 use PhpAmqpLib\Message\AMQPMessage;
 
 /**
- * @author Nassaji
+ * @author Nassajis
  */
 class Consumer extends Request
 {

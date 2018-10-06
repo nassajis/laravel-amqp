@@ -1,9 +1,9 @@
 <?php
 
-namespace Nassaji\Amqp;
+namespace Nassajis\Amqp;
 
-use Nassaji\Amqp\Consumer;
-use Nassaji\Amqp\Publisher;
+use Nassajis\Amqp\Consumer;
+use Nassajis\Amqp\Publisher;
 use Illuminate\Support\ServiceProvider;
 
 class AmqpServiceProvider extends ServiceProvider
@@ -23,9 +23,9 @@ class AmqpServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->bind('Amqp', 'Nassaji\Amqp\Amqp');
+        $this->app->bind('Amqp', 'Nassajis\Amqp\Amqp');
         if (!class_exists('Amqp')) {
-            class_alias('Nassaji\Amqp\Facades\Amqp', 'Amqp');
+            class_alias('Nassajis\Amqp\Facades\Amqp', 'Amqp');
         }
     }
 
@@ -36,10 +36,10 @@ class AmqpServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('Nassaji\Amqp\Publisher', function ($app) {
+        $this->app->singleton('Nassajis\Amqp\Publisher', function ($app) {
             return new Publisher(config());
         });
-        $this->app->singleton('Nassaji\Amqp\Consumer', function ($app) {
+        $this->app->singleton('Nassajis\Amqp\Consumer', function ($app) {
             return new Consumer(config());
         });
     }
@@ -51,6 +51,6 @@ class AmqpServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['Amqp', 'Nassaji\Amqp\Publisher', 'Nassaji\Amqp\Consumer'];
+        return ['Amqp', 'Nassajis\Amqp\Publisher', 'Nassajis\Amqp\Consumer'];
     }
 }

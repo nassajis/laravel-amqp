@@ -1,13 +1,13 @@
 <?php
 
-namespace Nassaji\Amqp;
+namespace Nassajis\Amqp;
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Connection\AMQPSSLConnection;
 use PhpAmqpLib\Channel\AMQPChannel;
 
 /**
- * @author Nassaji
+ * @author Nassajis
  */
 class Request extends Context
 {

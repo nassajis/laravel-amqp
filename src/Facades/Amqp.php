@@ -1,12 +1,12 @@
 <?php
 
-namespace Nassaji\Amqp\Facades;
+namespace Nassajis\Amqp\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @author Nassaji
- * @see Nassaji\Amqp\Amqp
+ * @author Nassajis
+ * @see Nassajis\Amqp\Amqp
  */
 class Amqp extends Facade
 {

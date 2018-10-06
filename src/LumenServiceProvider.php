@@ -1,13 +1,13 @@
 <?php
 
-namespace Nassaji\Amqp;
+namespace Nassajis\Amqp;
 
 use Illuminate\Support\ServiceProvider;
 
 /**
  * Lumen Service Provider
  *
- * @author Nassaji
+ * @author Nassajis
  */
 class LumenServiceProvider extends ServiceProvider
 {
@@ -28,18 +28,18 @@ class LumenServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('Nassaji\Amqp\Publisher', function ($app) {
+        $this->app->bind('Nassajis\Amqp\Publisher', function ($app) {
             return new Publisher($app->config);
         });
 
-        $this->app->bind('Nassaji\Amqp\Consumer', function ($app) {
+        $this->app->bind('Nassajis\Amqp\Consumer', function ($app) {
             return new Consumer($app->config);
         });
 
-        $this->app->bind('Amqp', 'Nassaji\Amqp\Amqp');
+        $this->app->bind('Amqp', 'Nassajis\Amqp\Amqp');
 
         if (!class_exists('Amqp')) {
-            class_alias('Nassaji\Amqp\Facades\Amqp', 'Amqp');
+            class_alias('Nassajis\Amqp\Facades\Amqp', 'Amqp');
         }
     }
 }

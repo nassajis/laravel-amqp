@@ -1,4 +1,4 @@
-# nassaji/laravel-amqp
+# nassajis/laravel-amqp
 AMQP wrapper for Laravel and Lumen to publish and consume messages especially from RabbitMQ
 
 ## Features
@@ -14,7 +14,7 @@ AMQP wrapper for Laravel and Lumen to publish and consume messages especially fr
 Add the following to your require part within the composer.json: 
 
 ```js
-"nassaji/laravel-amqp": "1.*" (Laravel >= 5.5)
+"nassajis/laravel-amqp": "1.*" (Laravel >= 5.5)
 ```
 ```batch
 $ php composer update
@@ -23,7 +23,7 @@ $ php composer update
 or
 
 ```
-$ php composer require nassaji/laravel-amqp
+$ php composer require nassajis/laravel-amqp
 ```
 
 ## Integration
@@ -31,7 +31,7 @@ $ php composer require nassaji/laravel-amqp
 ### Lumen
 
 Create a **config** folder in the root directory of your Lumen application and copy the content
-from **vendor/nassaji/laravel-amqp/config/amqp.php** to **config/amqp.php**.
+from **vendor/nassajis/laravel-amqp/config/amqp.php** to **config/amqp.php**.
 
 Adjust the properties to your needs.
 
@@ -75,7 +75,7 @@ Register the Lumen Service Provider in **bootstrap/app.php**:
 //...
 
 $app->configure('amqp');
-$app->register(Nassaji\Amqp\LumenServiceProvider::class);
+$app->register(Nassajis\Amqp\LumenServiceProvider::class);
 
 //...
 ```
@@ -95,11 +95,11 @@ class_alias(\Illuminate\Support\Facades\App::class, 'App');
 Open **config/app.php** and add the service provider and alias:
 
 ```php
-'Nassaji\Amqp\AmqpServiceProvider',
+'Nassajis\Amqp\AmqpServiceProvider',
 ```
 
 ```php
-'Amqp' => 'Nassaji\Amqp\Facades\Amqp',
+'Amqp' => 'Nassajis\Amqp\Facades\Amqp',
 ```
 
 

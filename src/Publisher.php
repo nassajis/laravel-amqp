@@ -1,9 +1,9 @@
 <?php
 
-namespace Nassaji\Amqp;
+namespace Nassajis\Amqp;
 
 /**
- * @author Nassaji
+ * @author Nassajis
  */
 class Publisher extends Request
 {

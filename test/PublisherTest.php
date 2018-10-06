@@ -1,13 +1,13 @@
 <?php
 
-namespace Nassaji\Amqp\Test;
+namespace Nassajis\Amqp\Test;
 
 use \Mockery;
-use Nassaji\Amqp\Publisher;
+use Nassajis\Amqp\Publisher;
 use Illuminate\Config\Repository;
 
 /**
- * @author Nassaji
+ * @author Nassajis
  */
 class PublisherTest extends BaseTestCase
 {
@@ -20,15 +20,15 @@ class PublisherTest extends BaseTestCase
     {
         parent::setUp();
 
-        // partial mock of \Nassaji\Amqp\Publisher
+        // partial mock of \Nassajis\Amqp\Publisher
         // we want all methods except [connect] to be real
-        $this->publisherMock = Mockery::mock('\Nassaji\Amqp\Publisher[connect]', [$this->configRepository]);
+        $this->publisherMock = Mockery::mock('\Nassajis\Amqp\Publisher[connect]', [$this->configRepository]);
         // set connection and channel properties
         $this->channelMock = Mockery::mock('\PhpAmqpLib\Channel\AMQPChannel');
         $this->connectionMock = Mockery::mock('\PhpAmqpLib\Connection\AMQPSSLConnection');
         // channel and connection are both protected and without changing the source this was the only way to mock them
-        $this->setProtectedProperty('\Nassaji\Amqp\Publisher', $this->publisherMock, 'channel', $this->channelMock);
-        $this->setProtectedProperty('\Nassaji\Amqp\Publisher', $this->publisherMock, 'connection', $this->connectionMock);
+        $this->setProtectedProperty('\Nassajis\Amqp\Publisher', $this->publisherMock, 'channel', $this->channelMock);
+        $this->setProtectedProperty('\Nassajis\Amqp\Publisher', $this->publisherMock, 'connection', $this->connectionMock);
 
     }
 

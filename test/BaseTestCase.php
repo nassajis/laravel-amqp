@@ -1,6 +1,6 @@
 <?php
 
-namespace Nassaji\Amqp\Test;
+namespace Nassajis\Amqp\Test;
 
 use \Mockery;
 use Illuminate\Config\Repository;

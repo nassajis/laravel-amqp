@@ -1,9 +1,9 @@
 <?php
 
-namespace Nassaji\Amqp\Exception;
+namespace Nassajis\Amqp\Exception;
 
 /**
- * @author Nassaji
+ * @author Nassajis
  */
 class Configuration extends \Exception
 {
